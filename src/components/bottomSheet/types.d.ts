@@ -91,6 +91,10 @@ export type BottomSheetProps = {
     >
   >;
       
+   /**
+   * Background color for contentMaskContainer.
+   * @type string
+   */
   maskContainerBackground?: string;
 
   // animated nodes
