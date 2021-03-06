@@ -99,6 +99,8 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
       enableHandlePanningGesture = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE,
       animateOnMount = DEFAULT_ANIMATE_ON_MOUNT,
       style: _providedStyle,
+      
+      maskContainerBackground = 'white',
 
       // animated nodes callback
       animatedPosition: _providedAnimatedPosition,
@@ -481,6 +483,7 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
     const contentMaskContainerStyle = useMemo<ViewStyle>(
       () => ({
         ...styles.contentMaskContainer,
+        backgroundColor: maskContainerBackground,
         paddingBottom: animatedIsLayoutReady ? sheetHeight : 0,
       }),
       [sheetHeight, animatedIsLayoutReady]
