@@ -90,6 +90,8 @@ export type BottomSheetProps = {
       | 'transform'
     >
   >;
+      
+  maskContainerBackground?: string;
 
   // animated nodes
   /**
